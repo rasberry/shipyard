@@ -58,7 +58,7 @@
             },
             stop: function(containerId) {
                 var promise = $http
-                    .post('/containers/' + containerId + '/stop')
+                    .post('/containers/' + containerId + '/stop?t=10')
                     .then(function(response) {
                         return response.data;
                     });
@@ -82,7 +82,7 @@
             },
             restart: function(containerId) {
                 var promise = $http
-                    .post('/containers/' + containerId + '/restart')
+                    .post('/containers/' + containerId + '/restart?t=10')
                     .then(function(response) {
                         return response.data;
                     });
